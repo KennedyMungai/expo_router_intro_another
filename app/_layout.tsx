@@ -57,6 +57,13 @@ function RootLayoutNav() {
 		>
 			<Stack>
 				<Stack.Screen name='index' options={{ headerShown: false }} />
+				<Stack.Screen
+					name='register'
+					options={{
+						headerTitle: 'Register',
+						headerBackVisible: true
+					}}
+				/>
 			</Stack>
 		</ThemeProvider>
 	)
