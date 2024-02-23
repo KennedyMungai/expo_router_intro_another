@@ -5,11 +5,12 @@ import {
 	ThemeProvider
 } from '@react-navigation/native'
 import { useFonts } from 'expo-font'
-import { Stack } from 'expo-router'
+import { Stack, useRouter } from 'expo-router'
 import * as SplashScreen from 'expo-splash-screen'
 import { useEffect } from 'react'
 
 import { useColorScheme } from '@/components/useColorScheme'
+import { Button } from 'react-native'
 
 export {
 	// Catch any errors thrown by the Layout component.
@@ -50,6 +51,7 @@ export default function RootLayout() {
 
 function RootLayoutNav() {
 	const colorScheme = useColorScheme()
+	const router = useRouter()
 
 	return (
 		<ThemeProvider
@@ -60,11 +62,17 @@ function RootLayoutNav() {
 				<Stack.Screen
 					name='register'
 					options={{
-						headerTitle: 'Register',
-						headerBackVisible: true
+						headerTitle: 'Create Account',
+						headerRight: () => (
+							<Button
+								title='Open'
+								onPress={() => {
+									router.push('/modal')
+								}}
+							/>
+						)
 					}}
 				/>
-				<Stack.Screen name='modal' />
 			</Stack>
 		</ThemeProvider>
 	)
