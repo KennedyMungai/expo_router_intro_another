@@ -64,6 +64,7 @@ function RootLayoutNav() {
 						headerBackVisible: true
 					}}
 				/>
+				<Stack.Screen name='modal' />
 			</Stack>
 		</ThemeProvider>
 	)
