@@ -6,7 +6,7 @@ const IndexPage = () => {
 	const router = useRouter()
 
 	const handlePress = () => {
-		router.replace('/(tab)')
+		router.replace('/(tab)/')
 	}
 
 	return (
