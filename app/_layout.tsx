@@ -73,6 +73,7 @@ function RootLayoutNav() {
 						)
 					}}
 				/>
+				<Stack.Screen name='(tab)' options={{ headerShown: false }} />
 				<Stack.Screen
 					name='modal'
 					options={{
