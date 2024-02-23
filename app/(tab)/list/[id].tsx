@@ -2,7 +2,7 @@ import { useLocalSearchParams } from 'expo-router'
 import React from 'react'
 import { Text, View } from 'react-native'
 
-const IndividualListItem = () => {
+const NewsDetailsPage = () => {
 	const { id } = useLocalSearchParams<{ id: string }>()
 
 	return (
@@ -14,4 +14,4 @@ const IndividualListItem = () => {
 	)
 }
 
-export default IndividualListItem
+export default NewsDetailsPage
