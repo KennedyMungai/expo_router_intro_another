@@ -75,7 +75,18 @@ function RootLayoutNav() {
 				/>
 				<Stack.Screen
 					name='modal'
-					options={{ presentation: 'modal' }}
+					options={{
+						presentation: 'modal',
+						headerShown: false,
+						headerLeft: () => (
+							<Button
+								title='Close'
+								onPress={() => {
+									router.back()
+								}}
+							></Button>
+						)
+					}}
 				/>
 			</Stack>
 		</ThemeProvider>
