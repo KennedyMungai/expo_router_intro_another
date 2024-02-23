@@ -1,6 +1,6 @@
 import { Link } from 'expo-router'
 import React from 'react'
-import { Text, View } from 'react-native'
+import { Pressable, Text, View } from 'react-native'
 
 const IndexPage = () => {
 	return (
@@ -8,7 +8,11 @@ const IndexPage = () => {
 			style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}
 		>
 			<Text>IndexPage</Text>
-            <Link href='/register'>Register</Link>
+			<Link href='/register' asChild>
+				<Pressable>
+					<Text>Register</Text>
+				</Pressable>
+			</Link>
 		</View>
 	)
 }
