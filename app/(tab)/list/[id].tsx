@@ -1,4 +1,4 @@
-import { useLocalSearchParams } from 'expo-router'
+import { Stack, useLocalSearchParams } from 'expo-router'
 import React from 'react'
 import { Text, View } from 'react-native'
 
@@ -9,6 +9,7 @@ const NewsDetailsPage = () => {
 		<View
 			style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}
 		>
+			<Stack.Screen options={{headerTitle: `News #${id}`}} />
 			<Text>{id}</Text>
 		</View>
 	)
